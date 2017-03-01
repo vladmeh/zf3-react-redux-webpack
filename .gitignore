@@ -1,0 +1,17 @@
+.vagrant/
+vendor/
+config/development.config.php
+data/cache/*
+!data/cache/.gitkeep
+phpunit.xml
+ubuntu-xenial-16.04-cloudimg-console.log
+.idea/
+/node_modules/
+/composer.lock
+/CONDUCT.md
+/CONTRIBUTING.md
+/docker-compose.yml
+/Dockerfile
+/LICENSE.md
+/Vagrantfile
+/TODO.md

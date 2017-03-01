@@ -1,0 +1,23 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('ZF3 + React Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico']) ?>
+        <?php $this->headScript()->prependFile($this->basePath('js/bundle.js')) ?>
+    </head>
+    <body>
+        <div class="container">
+            <div id="root"></div>
+        </div>
+        <?= $this->headScript()?>
+    </body>
+</html>
