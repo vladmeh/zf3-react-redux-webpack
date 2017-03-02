@@ -10,13 +10,25 @@
 namespace Api\Controller;
 
 
+use Api\Model\GreetingsTable;
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
 
 class ApiController extends AbstractRestfulController
 {
+
+    private $table;
+
+    public function __construct(GreetingsTable $table)
+    {
+        $this->table = $table;
+    }
+
     public function indexAction()
     {
-        return new JsonModel(['greeting' => 'Hello World!']);
+        $id = (int) $this->params()->fromRoute('id', 0);
+        $greeting = $this->table->getGreeting($id);
+
+        return new JsonModel((array)$greeting);
     }
 }

@@ -13,20 +13,14 @@ use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
-    'controllers' => [
-        'factories' => [
-            Controller\ApiController::class => InvokableFactory::class,
-        ],
-    ],
     // The following section is new and should be added to your file:
     'router' => [
         'routes' => [
             'api' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route' => '/api[/:action[/:id]]',
+                    'route' => '/api[/:id]',
                     'constraints' => [
-                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',
                     ],
                     'defaults' => [

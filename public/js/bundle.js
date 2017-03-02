@@ -10333,7 +10333,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	return {
 		onMount: function onMount() {
-			fetch("/api").then(function (response) {
+			fetch("/api/1").then(function (response) {
 				return response.json();
 			}).then(function (json) {
 				dispatch({ type: 'FETCH_GREETING', text: json.greeting });
