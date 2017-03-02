@@ -14,9 +14,7 @@ $ cd MyApp
 $ git clone https://github.com/vladmeh/zf3-react-redux-webpack.git ./
 $ composer install
 $ npm install
-$ php -S 0.0.0.0:8080 -t public public/index.php
-# OR use the composer alias:
-$ composer serve
+$ php -S localhost:8080 -t public public/index.php
 ```
 
 ## Development mode
